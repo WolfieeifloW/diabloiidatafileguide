@@ -6865,6 +6865,20 @@ break-word'>
                     </ul>
                 </li>
                 <li>
+                    <a href="#hirelingdesc">hirelingdesc.txt</a>
+                    <ul>
+                        <li><a href="#hirelingdescov">Overview</a></li>
+                        <li><a href="#hirelingdescdf">Data Fields</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#LevelGroups">LevelGroups.txt</a>
+                    <ul>
+                        <li><a href="#LevelGroupsov">Overview</a></li>
+                        <li><a href="#LevelGroupsdf">Data Fields</a></li>
+                    </ul>
+                </li>
+                <li>
                     <a href="#Levels">Levels.txt</a>
                     <ul>
                         <li><a href="#Levelsov">Overview</a></li>
@@ -9339,10 +9353,10 @@ on the NPC’s store. If equals 0, then the item will randomly appear on the
 NPC’s store when appropriate.<o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>worldevent - </span></strong><span
-style='mso-fareast-font-family:"Times New Roman"'>Boolean Field. If equals 1,
-then this item can be used to trigger the Uber Diablo world event when it is
-sold to an NPC. If equals 0, then ignore this.<strong><span style='font-family:
+mso-bidi-font-family:"Times New Roman"'>diablocloneweight - </span></strong><span
+style='mso-fareast-font-family:"Times New Roman"'>The amount of weight added to
+the diablo clone progress when this item is sold. When offline, selling this
+item will instead immediately spawn diablo clone.<strong><span style='font-family:
 "Arial",sans-serif;mso-bidi-font-family:"Times New Roman";font-weight:normal'><o:p></o:p></span></strong></span></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
@@ -11133,6 +11147,21 @@ style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
 font-weight:normal'>Specifies the belt slot bottom side coordinates. This is
 use for Server verification purposes and does not affect the local box UI in
 the client.</span></strong><span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>defaultItemTypeCol1 (to defaultItemTypeCol4) - </span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'>Specifies the default item type used for the populate
+belt and auto-use functionality on controller.</span></strong><span style='mso-fareast-font-family:"Times New Roman"'>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>defaultItemCodeCol1 (to defaultItemCodeCol4) - </span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'>Specifies the default item code used for the populate
+belt and auto-use functionality on controller. Leaving this blank uses no
+code and instead relies entirely on the item type.</span></strong><span style='mso-fareast-font-family:"Times New Roman"'>
+<o:p></o:p></span></p>
 
 <h1 id="books"><a name="_Toc52465939"><span style='font-size:36.0pt;mso-fareast-font-family:
 "Times New Roman";mso-bidi-font-family:Arial'>books.txt</span></a><span
@@ -14069,6 +14098,16 @@ for the total damage a player deals to another player’s mercenary</p>
 
 <p class=MsoNormal><b>PlayerDamagePercentVSPrimeEvil - </b>Percentage modifier
 for the total damage a player deals to a Prime Evil boss</p>
+
+<p class=MsoNormal><b><o:p>&nbsp;</o:p></b></p>
+
+<p class=MsoNormal><b>PlayerHitReactBufferVSPlayer - </b>The frame length for
+the amount of time a player cannot be placed into another hit react from
+a player (25 frames = 1 second).</p>
+
+<p class=MsoNormal><b>PlayerHitReactBufferVSMonster - </b>The frame length
+for the amount of time a player cannot be placed into another hit
+react from a monster (25 frames = 1 second).</p>
 
 <p class=MsoNormal><b><o:p>&nbsp;</o:p></b></p>
 
@@ -17667,7 +17706,7 @@ bold'><o:p></o:p></span></h3>
   “descstr” string<span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:29;mso-yfti-lastrow:yes'>
+ <tr style='mso-yfti-irow:29;'>
   <td width=64 valign=top style='width:48.15pt;border:1px solid white 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -17704,6 +17743,33 @@ bold'><o:p></o:p></span></h3>
   Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   </span></span></span><![endif]>Combines these values into the designated
   “descstr” string<span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30;mso-yfti-lastrow:yes'>
+  <td width=64 valign=top style='width:48.15pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>29<o:p></o:p></span></p>
+  </td>
+  <td width=110 valign=top style='width:82.65pt;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>descstrpos<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>descstrneg<o:p></o:p></span></p>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>descstr2<o:p></o:p></span></p>
+  </td>
+  <td width=605 valign=top style='width:453.8pt;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Sprintf num positive<o:p></o:p></span></p>
+  <p class=MsoListParagraphCxSpFirst style='margin-left:.25in;mso-add-space:
+  auto;text-indent:-.25in;mso-list:l6 level1 lfo1'><![if !supportLists]><span
+  style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+  Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><![endif]><span style='mso-fareast-font-family:"Times New Roman"'>Same as function 19,
+  except the it uses the absolute value of [value]</span></p>
   </td>
  </tr>
 </table>
@@ -19498,6 +19564,79 @@ style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>re
 mso-bidi-font-family:"Times New Roman";font-weight:normal'>This is the maximum
 Gold cost to resurrect this hireling<o:p></o:p></span></strong></p>
 
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>equivalentcharclass
+- </span></strong><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman";font-weight:normal'>Determines what class this hireling is
+treated like under the hood when calculating skill level bonuses and gear restrictions.<o:p></o:p></span></strong></p>
+
+<h1 id="hirelingdesc" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
+name="_Toc52465950"><span style='font-size:36.0pt;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:Arial'>hirelingdesc.txt</span></a><span style='font-size:36.0pt;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial'><o:p></o:p></span></h1>
+
+<h2 id="hirelingdescov" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>Overview</span></strong><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>This
+file controls attributes about player mercenaries that relate to the monster class but not the specific statblocks.</p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><o:p>&nbsp;</o:p></p>
+
+<h2 id="hirelingdescdf" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>Data
+Fields<o:p></o:p></span></strong></h2>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>id -</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'> The id of the hireling monster class as defined in monstats.txt</span></strong><strong><span style='font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>alternateVoice
+-</span></strong><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman";font-weight:normal'> Boolean field. If equals 1, then the hireling
+will use the alternate (feminine) voice type for voice lines. If equals 0, then it will use the masculine voice type.</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<h1 id="LevelGroups" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
+name="_Toc52465950"><span style='font-size:36.0pt;mso-fareast-font-family:"Times New Roman";
+mso-bidi-font-family:Arial'>LevelGroups.txt</span></a><span style='font-size:36.0pt;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:Arial'><o:p></o:p></span></h1>
+
+<h2 id="LevelGroupsov" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>Overview</span></strong><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>This
+file controls how the game groups levels together. This has currently no gameplay purpose and is mainly used for condensing level names in desecrated (terror) zone messaging.</p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><o:p>&nbsp;</o:p></p>
+
+<h2 id="LevelGroupsdf" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>Data
+Fields<o:p></o:p></span></strong></h2>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>Name -</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'> Defines the unique name pointer for the level group, which is used in other files</span></strong><strong><span style='font-family:"Arial",sans-serif;
+mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>Id
+-</span></strong><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman";font-weight:normal'> Defines the unique numeric ID for the level group, which is used in other files</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>GroupName
+-</span></strong><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman";font-weight:normal'> String Field. Used for displaying the name of the level group, such as when all levels in a group have been desecrated.</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
 <h1 id="Levels" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
 name="_Toc52465950"><span style='font-size:36.0pt;mso-fareast-font-family:"Times New Roman";
 mso-bidi-font-family:Arial'>Levels.txt</span></a><span style='font-size:36.0pt;
@@ -19515,7 +19654,7 @@ on the level.</p>
 <p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><o:p>&nbsp;</o:p></p>
 
 <p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>This
-file uses the following files: AutoMap.txt, LvlMaze.txt, LvlPrest.txt, LvlSub.txt,
+file uses the following files: AutoMap.txt, LevelGroups.txt, LvlMaze.txt, LvlPrest.txt, LvlSub.txt,
 LvlTypes.txt, LvlWarp.txt, monstats.txt, Objgroup.txt</p>
 
 <h2 id="Levelsdf" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
@@ -21743,6 +21882,13 @@ style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>Ob
 mso-bidi-font-family:"Times New Roman";font-weight:normal'>Determines the
 random chance (out of 100) for each Object Group to spawn in the area level.
 This field depends on the related “ObjGrp#” field being defined.<o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></strong></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'>LevelGroup - </span></strong><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman";font-weight:normal'>Defines what group this level belongs to. Used for condensing level names in desecrated (terror) zones messaging. See LevelGroups.txt.<o:p></o:p></span></strong></p>
 
 <h1 id="LvlMaze" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
 name="_Toc52465951"><span style='font-size:36.0pt;mso-fareast-font-family:"Times New Roman";
@@ -33439,10 +33585,10 @@ appear on the NPC’s store. If equals 0, then the item will randomly appear on
 the NPC’s store when appropriate.<o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>worldevent - </span></strong><span
-style='mso-fareast-font-family:"Times New Roman"'>Boolean Field. If equals 1,
-then this item can be used to trigger the Uber Diablo world event when it is
-sold to an NPC. If equals 0, then ignore this.<strong><span style='font-family:
+mso-bidi-font-family:"Times New Roman"'>diablocloneweight - </span></strong><span
+style='mso-fareast-font-family:"Times New Roman"'>The amount of weight added to the
+diablo clone progress when this item is sold. When offline, selling this item will instead
+immediately spawn diablo clone.<strong><span style='font-family:
 "Arial",sans-serif;mso-bidi-font-family:"Times New Roman";font-weight:normal'><o:p></o:p></span></strong></span></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
@@ -36329,6 +36475,40 @@ equals 0, then ignore this.</span></strong><strong><span style='font-family:
 "Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>CannotDesecrate -</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'> Boolean Field. If equals 1, then the monster will
+not be able to be desecrated when inside a desecrated level. If equals
+0, then ignore this.</span></strong><strong><span style='font-family:
+"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>rightArmItemType -</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'> Determines what type of items the monster is allowed to
+hold in its right arm (see ItemTypes.txt). A blank value means it can hold any item.
+</span></strong><strong><span style='font-family:
+"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>leftArmItemType -</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'> Determines what type of items the monster
+is allowed to hold in its left arm (see ItemTypes.txt). A blank
+value means it can hold any item.</span></strong><strong><span style='font-family:
+"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>canNotUseTwoHandedItems -</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'> Boolean Field. If equals 1, then the
+monster can not items marked as two handed (see weapons.txt)</span></strong><strong><span style='font-family:
+"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
 mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
@@ -36661,12 +36841,12 @@ baseline stats. </span></strong><strong><span style='font-family:"Arial",sans-se
 mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>NoShldBlock -</span></strong><strong><span
+mso-bidi-font-family:"Times New Roman"'>ShieldBlockOverride -</span></strong><strong><span
 style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
-font-weight:normal'> Boolean Field. If equals 1, then the monster can block
-without a shield (the block chance stat will take effect even without a shield
-equipped). If equals 0, then ignore this.</span></strong><strong><span
-style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+font-weight:normal'> If equals 1, then the monster can block without a shield
+(the block chance stat will take effect even without a shield equipped).
+If equals 2, then the monster cannot block at all, even with a shield equipped.
+If equals 0, then ignore this.</span></strong><strong><spanstyle='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
 mso-bidi-font-family:"Times New Roman"'>ToBlock - </span></strong><strong><span
@@ -40132,6 +40312,14 @@ cannot be revived by the Necromancer Revive skill.</span></strong><strong><span
 style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
+mso-bidi-font-family:"Times New Roman"'>limitCorpses -</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+font-weight:normal'> Boolean Field. If equals 1, then the monster’s corpse will
+be placed into a pool with all other corpses with this field checked. Once
+that pool reaches the max (50), the corpses at the beginning of the pool start getting removed.</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></strong></p>
+
+<p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
 mso-bidi-font-family:"Times New Roman"'>critter -</span></strong><strong><span
 style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
 font-weight:normal'> Boolean Field. If equals 1, then the monster will be
@@ -40718,6 +40906,12 @@ style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
 mso-bidi-theme-font:major-bidi;font-weight:normal;mso-bidi-font-weight:bold'> -
 Controls what skill should the monster use when it is resurrected (See
 skills.txt).<o:p></o:p></span></strong></h3>
+
+<h3><strong><span style='font-family:"Arial",sans-serif;mso-bidi-font-family:
+"Times New Roman";mso-bidi-theme-font:major-bidi;mso-bidi-font-weight:normal'>SpawnUniqueMod</span></strong><strong><span
+style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:major-bidi;font-weight:normal;mso-bidi-font-weight:bold'> -
+Controls what unique modifier the monster should always spawn with (See monumod.txt)..<o:p></o:p></span></strong></h3>
 
 <h1 id="MonType" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
 name="_Toc52465967"><span style='font-size:36.0pt;mso-fareast-font-family:"Times New Roman";
@@ -49309,10 +49503,10 @@ field on Properties.txt)<b><span style='mso-fareast-font-family:"Times New Roman
 
 <p class=MsoNormal><b><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
-<p class=MsoNormal><b><span style='mso-fareast-font-family:"Times New Roman"'>worldevent
-- </span></b><span style='mso-fareast-font-family:"Times New Roman"'>Boolean
-Field. If equals 1, then this item can be used to trigger the Uber Diablo world
-event when it is sold to an NPC. If equals 0, then ignore this.<o:p></o:p></span></p>
+<p class=MsoNormal><b><span style='mso-fareast-font-family:"Times New Roman"'>diablocloneweight
+- </span></b><span style='mso-fareast-font-family:"Times New Roman"'>The amount of weight added
+to the diablo clone progress when this item is sold. When offline, selling this item will
+instead immediately spawn diablo clone.<o:p></o:p></span></p>
 
 <h1 id="Sets" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
 name="_Toc52465982"><span style='font-size:36.0pt;mso-fareast-font-family:"Times New Roman";
@@ -50252,17 +50446,12 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>calc1</p>
-  <p class=MsoNormal>calc4</p>
   </td>
   <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>AmaStartJab - Validate the target enemy unit and attack
-  it. Use “calc1” to control the percentage increase for physical damage dealt.
-  Use “calc4” to control the percent of damage converted to elemental, if the
-  “Etype” field is used.</p>
+  <p class=MsoNormal>AmaStartJab - Return true.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:7'>
@@ -50393,17 +50582,16 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal>srvmissilea</p>
-  <p class=MsoNormal>calc1</p>
   <p class=MsoNormal>calc2</p>
   </td>
   <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>SorStartInferno - Continuously create missiles while the
-  caster has the “inferno” state, and adjust the animations and modes based on
-  the inferno frames. Use “calc1” to control the range of the missile. Use
-  “calc2” to control the monster channel duration.</p>
+  <p class=MsoNormal>SorStartInferno - Continuously create missiles
+	while the caster has the “inferno” state, and adjust the animations
+	and modes based on the inferno frames. Use “calc2” to control the
+	monster channel duration.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:13'>
@@ -50643,8 +50831,7 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>AssStartProgressiveAttack - Validate that the caster unit
-  can melee attack the target enemy</p>
+  <p class=MsoNormal>AssStartProgressiveAttack - Reset internal variable used for keeping track of skill steps.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:25'>
@@ -50657,17 +50844,13 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>calc1<br>
-  Param1</p>
-  <p class=MsoNormal>Param2</p>
+  <p class=MsoNormal>calc1</p>
   </td>
   <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>AssStartDragonTalon - Validate that the caster unit can
-  melee attack the target enemy. Use “calc1” to control the number of attacks.
-  Use “Param1” and “Param2” to control the physical damage bonus.</p>
+  <p class=MsoNormal>AssStartDragonTalon - Use “calc1” to control the number of attacks.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:26'>
@@ -50686,7 +50869,7 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>AssStartDragonClaw - Validate the target enemy</p>
+  <p class=MsoNormal>AssStartDragonClaw - Reset internal variable used for keeping track of skill steps.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:27'>
@@ -50711,12 +50894,10 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal>AssStartBladeFury - Use the “srvmissilea” missile by default,
-  or use 1 of the 3 missiles depending on the progressive charges controlled by
-  the “aurastate” field and “aurastat1” fields. If the caster unit does not
-  have the “inferno” state, then add it and handle the animation frames. If the
-  caster unit does have the “inferno” state, then periodically create missiles.
-  Use the progressive calculation fields based on the number of charges to
-  control the delay between creating missiles.</p>
+	or use 1 of the 3 missiles depending on the progressive charges controlled by
+	the “aurastate” field and “aurastat1” fields. If the caster unit does not have
+	the “inferno” state, then add it and handle the animation frames. If the caster
+	unit does have the “inferno” state, then periodically create missiles.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:28'>
@@ -50855,7 +51036,7 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   Use “calc1” to control the physical damage percent increase. Use “calc2” to
   control the flat damage increase. Use “calc3” to control the attack speed
   bonus. Use “calc4” to control the percent of damage converted to elemental,
-  if the “Etype” field is used.</p>
+  if the “Etype” field is used. Applies “aurastate” to self.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:34'>
@@ -50975,6 +51156,12 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal>aurastate</p>
   <p class=MsoNormal>auralencalc</p>
+  <p class=MsoNormal>auraevent1</p>
+  <p class=MsoNormal>auraeventfunc1</p>
+  <p class=MsoNormal>auraevent2</p>
+  <p class=MsoNormal>auraeventfunc2</p>
+  <p class=MsoNormal>auraevent3</p>
+  <p class=MsoNormal>auraeventfunc3</p>
   </td>
   <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
   none;
@@ -50983,7 +51170,7 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   <p class=MsoNormal>BarStartWhirlwind - Stop any skills and validate the
   target location. Modify the caster unit’s collision to only collide with
   walls and objects and save the target location. Apply the “aurastate” state
-  with the length controlled.</p>
+  with the length controlled. Applies “auraevents” if they exist.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:40'>
@@ -51378,17 +51565,13 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal>aurastate</p>
-  <p class=MsoNormal>calc1</p>
-  <p class=MsoNormal>calc4</p>
   </td>
   <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>DruStartRabies - Validate the target enemy and attempt to
-  attack it. Use “calc1” to control the percentage increase for physical damage
-  dealt. Use “calc4” to control the percent of damage converted to elemental,
-  if the “Etype” field is used. Validate the “aurastate” state.</p>
+  <p class=MsoNormal>DruStartRabies - Validate the “aurastate” state.
+	Reset internal variables used to keep track of hits.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:59'>
@@ -51536,7 +51719,7 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal>MonStartFrenzy - Validate that the target is an enemy</p>
+  <p class=MsoNormal>MonStartFrenzy - Validate that the target is an enemy. Reset internal variables used to keep track of frames and attacks.</p>
   </td>
  </tr>
  <tr style='mso-yfti-irow:66'>
@@ -51559,7 +51742,7 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   ammunition and durability</p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:67;mso-yfti-lastrow:yes'>
+ <tr style='mso-yfti-irow:67;'>
   <td width=64 valign=top style='width:48.15pt;border:1px solid white 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -51582,6 +51765,43 @@ a code value to call a function, affecting how certain fields are used.<o:p></o:
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal>ApplyPassiveAuraEvents - Check each of the aura events on
   the skill and apply the event handler to use the aura event functions</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:68;'>
+  <td width=64 valign=top style='width:48.15pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>67</p>
+  </td>
+  <td width=187 valign=top style='width:1.95in;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  </td>
+  <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>BarStartFrenzy - Resets internal variables used to keep track of frames and attacks.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:69;mso-yfti-lastrow:yes'>
+  <td width=64 valign=top style='width:48.15pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>68</p>
+  </td>
+  <td width=187 valign=top style='width:1.95in;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>calc2</p>
+  </td>
+  <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>BarStartDoubleSwing - Uses “calc2” to apply an attack rate bonus.</p>
   </td>
  </tr>
 </table>
@@ -55210,7 +55430,7 @@ function, affecting how certain fields are used.<o:p></o:p></span></strong></h3>
   none;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal><o:p>&nbsp;</o:p></p>
+  <p class=MsoNormal><o:p>aurastate</o:p></p>
   </td>
   <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
   none;
@@ -55461,7 +55681,7 @@ font-weight:normal'>Control new missile changes per player skill. Values of 1
 will force enable it for that skill. Skills that have matching server/client
 missiles sets for the skill get auto enabled. Setting this to a value greater
 than 1 will force it to skip this auto enable logic. If equals 0, then ignore
-this.<o:p></o:p></span></strong></p>
+this. Note: this feature is disabled.<o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
 mso-bidi-font-family:"Times New Roman"'>srvoverlay -</span></strong><strong><span
@@ -56749,13 +56969,13 @@ then the player must be dual wielding weapons for this passive state to be
 enabled. If the value equals 0, then ignore this field.<o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>passivestat1 (to passivestat5) - </span></strong><strong><span
+mso-bidi-font-family:"Times New Roman"'>passivestat1 (to passivestat6) - </span></strong><strong><span
 style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
 font-weight:normal'>Assigns stat modifiers to the passive skill (See the “Stat”
 field from ItemStatCost.txt)<o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>passivecalc1 (to passivecalc5) - </span></strong><strong><span
+mso-bidi-font-family:"Times New Roman"'>passivecalc1 (to passivecalc6) - </span></strong><strong><span
 style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
 font-weight:normal'>Calculation Field. Controls the value for the relative
 “passivestat#” field.<o:p></o:p></span></strong></p>
@@ -61071,7 +61291,7 @@ used.</span></strong> </h3>
 </table>
 
 <h3><strong><span style='font-family:"Arial",sans-serif;mso-bidi-font-family:
-"Times New Roman";mso-bidi-theme-font:major-bidi;mso-bidi-font-weight:normal'>srvstopfunc
+"Times New Roman";mso-bidi-theme-font:major-bidi;mso-bidi-font-weight:normal'>cltstopfunc
 - </span></strong><strong><span style='font-family:"Arial",sans-serif;
 mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:major-bidi;
 font-weight:normal;mso-bidi-font-weight:bold'>Client Stop function. This
@@ -61153,7 +61373,7 @@ font-weight:normal'> Used as a parameter for controlling what main missile is
 used for the client functions used (See “Missile” field in Missiles.txt)<o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>cltmissilea (to cltmissileed) -</span></strong><strong><span
+mso-bidi-font-family:"Times New Roman"'>cltmissilea (to cltmissiled) -</span></strong><strong><span
 style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
 font-weight:normal'> Used as a parameter for controlling what secondary missile
 is used for the client functions used (See “Missile” field in Missiles.txt)<o:p></o:p></span></strong></p>
@@ -63215,13 +63435,13 @@ equals 0, then ignore this.</span></strong><strong><span style='font-family:
 mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>calc1 (to calc4) - </span></strong><strong><span
+mso-bidi-font-family:"Times New Roman"'>calc1 (to calc6) - </span></strong><strong><span
 style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
 font-weight:normal'>Calculation Field. It is used as a possible parameter for
 skill functions or as a numeric input for other calculation fields.<o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>Param1 (to Param8) - </span></strong><strong><span
+mso-bidi-font-family:"Times New Roman"'>Param1 (to Param12) - </span></strong><strong><span
 style='font-family:"Arial",sans-serif;mso-bidi-font-family:"Times New Roman";
 font-weight:normal'>Integer Field. It is used as a possible parameter for skill
 functions or as a numeric input for other calculation fields.</span></strong><strong><span
@@ -65552,6 +65772,16 @@ the global skillicon file. This will use the value as the standard icon to
 display, and the next value (value + 1) as the button pressed icon display.</span></span></span><span
 style='font-weight:normal;mso-bidi-font-weight:bold'><o:p></o:p></span></h3>
 
+<h3 style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
+name="_Toc44434101"></a><a name="_Toc45037832"><span style='mso-bookmark:_Toc44434101'><span
+style='mso-bidi-font-weight:bold'>HireableIconCel - </span></span></a><span
+style='mso-bookmark:_Toc45037832'><span style='mso-bookmark:_Toc44434101'><span
+style='font-weight:normal;mso-bidi-font-weight:bold'>Determines the icon asset for
+displaying the skill on a hireable (mercenary). This requires an ID value based on
+the hireable skillicon files. This will use the value as the standard icon to display,
+and the next value (value + 1) as the button pressed icon display.</span></span></span><span
+style='font-weight:normal;mso-bidi-font-weight:bold'><o:p></o:p></span></h3>
+
 <p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><o:p>&nbsp;</o:p></b></p>
 
 <p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b>str
@@ -66112,7 +66342,7 @@ bold'><o:p></o:p></span></h3>
   <p class=MsoNormal>(Similar to function 17)</p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:25;mso-yfti-lastrow:yes'>
+ <tr style='mso-yfti-irow:25;'>
   <td width=64 valign=top style='width:48.15pt;border:1px solid white 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
@@ -66131,6 +66361,46 @@ bold'><o:p></o:p></span></h3>
   <p class=MsoNormal>Calculates damage using the equipped weapon damage and the
   linked skill’s physical and elemental damage</p>
   <p class=MsoNormal>(Similar to function 5)</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26;'>
+  <td width=64 valign=top style='width:48.15pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>25</p>
+  </td>
+  <td width=110 valign=top style='width:82.65pt;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><o:p>ddam calc1</o:p></p>
+  <p class=MsoNormal><o:p>ddam calc2</o:p></p>
+  </td>
+  <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Same as function 5 with a percentage multiplier to min and max.</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27;mso-yfti-lastrow:yes'>
+  <td width=64 valign=top style='width:48.15pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>26</p>
+  </td>
+  <td width=110 valign=top style='width:82.65pt;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><o:p>ddam calc1</o:p></p>
+  <p class=MsoNormal><o:p>ddam calc2</o:p></p>
+  </td>
+  <td width=704 valign=top style='width:527.75pt;border-top:none;border-left:
+  none;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Calculates weapon damage and skill damage as two values.</p>
   </td>
  </tr>
 </table>
@@ -68057,6 +68327,101 @@ reverberation level relative to room effect.<o:p></o:p></span></p>
 <p class=MsoNormal><b><span style='mso-fareast-font-family:"Times New Roman"'>VOX
 EAX Rev Delay - </span></b><span style='mso-fareast-font-family:"Times New Roman"'>Late
 reverberation delay time relative to initial reflection.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal><b><span style='mso-fareast-font-family: "Times New Roman"'>InheritEnvironment – </span></b>
+<span style='mso-fareast-font-family: "Times New Roman"'>Boolean field. If equals 1, then this sound
+environment will inherit certain values from the existing environment and overwrite other values
+with its own.<?xml:namespace prefix = "o" ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:-.3pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b>Overwritten Values</b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><o:p>Song</o:p></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Day Ambience</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>HD Day Ambience</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Night Ambience</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>HD Night Ambience</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Day Event</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>HD Day Event</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Night Event</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>HD Night Event</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Event Delay</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+  <td width=312 valign=top style='width:222pt;border:1px solid white 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>HD Event Delay</p>
+  </td>
+ </tr>
+</table>
 
 <h1 id="states" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
 name="_Toc52465988"><span style='font-size:36.0pt;mso-fareast-font-family:"Times New Roman";
@@ -70914,10 +71279,10 @@ on Properties.txt)<b><span style='mso-fareast-font-family:"Times New Roman"'><o:
 
 <p class=MsoNormal><b><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
 
-<p class=MsoNormal><b><span style='mso-fareast-font-family:"Times New Roman"'>worldevent
--</span></b><span style='mso-fareast-font-family:"Times New Roman"'> Boolean
-Field. If equals 1, then this item can be used to trigger the Uber Diablo world
-event when it is sold to an NPC. If equals 0, then ignore this.<b><o:p></o:p></b></span></p>
+<p class=MsoNormal><b><span style='mso-fareast-font-family:"Times New Roman"'>diablocloneweight
+-</span></b><span style='mso-fareast-font-family:"Times New Roman"'> The amount of weight added
+to the diablo clone progress when this item is sold. When offline, selling this item will
+instead immediately spawn diablo clone.<b><o:p></o:p></b></span></p>
 
 <h1 id="UniquePrefix" style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
 name="_Toc52465993"><span style='font-size:36.0pt;mso-fareast-font-family:"Times New Roman";
@@ -72963,10 +73328,10 @@ appear on the NPC’s store. If equals 0, then the item will randomly appear on
 the NPC’s store when appropriate.<o:p></o:p></span></strong></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
-mso-bidi-font-family:"Times New Roman"'>worldevent - </span></strong><span
-style='mso-fareast-font-family:"Times New Roman"'>Boolean Field. If equals 1,
-then this item can be used to trigger the Uber Diablo world event when it is
-sold to an NPC. If equals 0, then ignore this.<strong><span style='font-family:
+mso-bidi-font-family:"Times New Roman"'>diablocloneweight - </span></strong><span
+style='mso-fareast-font-family:"Times New Roman"'>The amount of weight added to
+the diablo clone progress when this item is sold. When offline, selling this
+item will instead immediately spawn diablo clone.<strong><span style='font-family:
 "Arial",sans-serif;mso-bidi-font-family:"Times New Roman";font-weight:normal'><o:p></o:p></span></strong></span></p>
 
 <p class=MsoNormal><strong><span style='font-family:"Arial",sans-serif;
