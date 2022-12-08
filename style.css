@@ -12,7 +12,7 @@ body {
   padding: 0 2em 2em 17em;
   font-size: 16px;
   background-color: black;
-  color: white;
+  color: #d3d3d3;
 }
 
 table {
@@ -64,7 +64,7 @@ h2 {
 
 .toc li a {
   display: inline-block;
-  color: white;
+  color: #d3d3d3;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
