@@ -11,4 +11,4 @@ It has a sidebar with all the txt files for easy searching / jumping around.
 And it runs smoother than the default Blizzard one!
 
 If you enjoy my version of the D2DFG and want to support me you can donate to me!  
-Donation link: [PayPal](https://www.paypal.com/donate/?business=9JARHKMQ9UU3S&no_recurring=0&item_name=Diablo+II+Data+File+Guide&currency_code=CAD)
+Donation link: [PayPal](https://paypal.me/wolfieeiflow?country.x=CA&locale.x=en_US)
