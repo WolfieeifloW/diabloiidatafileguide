@@ -16,6 +16,45 @@ body {
   color: #d3d3d3;
 }
 
+.light-mode {
+  background-color: white;
+  color: black;
+
+  .mode-button {
+    background-color: black;
+    color: white;
+  }  
+
+  b {
+    color: black;
+  }
+
+  .toc {
+    background-color: white;
+  }
+
+  .toc li a {
+    color: black;
+  }
+  
+  .toc li.visible > a {
+    color: gray;
+  }
+
+  td, th {
+    border: 1px solid black;
+  }
+}
+
+.mode-button {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
 b {
   color: #e3e3e3;
 }
@@ -79,7 +118,7 @@ h3 {
 
 .toc {
   position: fixed;
-  background: black;
+  background-color: black;
   left: 0em;
   top: 0em;
   padding: 1em;
@@ -122,43 +161,4 @@ h3 {
 
 .toc-marker path {
   transition: all 0.3s ease;
-}
-
-.contents {
-  padding: 1em;
-  /* max-width: 800px; */
-  font-size: 1.2em;
-  font-family: "Frank Ruhl Libre", sans-serif;
-}
-
-.contents img {
-  max-width: 100%;
-}
-
-.contents .code-block {
-  white-space: pre;
-  overflow: auto;
-  max-width: 100%;
-}
-
-.contents .code-block code {
-  display: block;
-  background-color: #f9f9f9;
-  padding: 10px;
-}
-
-.contents .code-inline {
-  background-color: #f9f9f9;
-  padding: 4px;
-}
-
-/* .contents h2,
-.contents h3 {
-  padding-top: 1em;
-} */
-
-@media screen and (max-width: 1200px) {
-  body {
-    font-size: 14px;
-  }
 }
