@@ -1,5 +1,7 @@
 # Diablo II Data File Guide
 
+https://wolfieeiflow.github.io/diabloiidatafileguide/
+
 Sick of your retinas burning looking at the Diablo II Data File Guide provided by Blizzard?  
 Annoyed with the Table of Contents being stuck at the top so you have to scroll all the way back up to click to a different section?
 
