@@ -1,44 +1,77 @@
 * {
   box-sizing: border-box;
-  font-family: "Arial",sans-serif;
+  font-family: Arial,sans-serif;
+  font-size:1em;
 }
 
 body {
-  padding-top: 0px;
+  margin-top: 0;
+  margin-right: 0;
   width: 100vw;
   height: 100vh;
   overflow: auto;
   overflow-x: hidden;
-  padding: 0 2em 2em 17em;
-  font-size: 16px;
+  padding: 0 1.59em 2em 17em;
   background-color: black;
   color: #d3d3d3;
 }
 
+.d2dfgtitle {
+  margin-bottom: -50px;
+}
+
+.fork {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 3;
+}
+
+p {
+  margin:0;
+}
+
 table {
-  margin-bottom: 1em;
+  margin: 0.5em 0 1em 0;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid white;
+}
+
+td {
+  padding: 0 5.4pt 0 5.4pt;
+}
+
+ol {
+  margin-bottom:0;
+}
+
+ul {
+  margin-bottom:0;
 }
 
 h1 {
-  font-size: 48.0pt;
-  margin-top: 0.75em;
+  font-size: 72pt;
+  margin-top: 0.25em;
   margin-bottom: 0em;
 }
 
 h2 {
+  font-size: 48pt;
+  margin-top: 0.75em;
+  margin-bottom: 0em;
+  color: #A59263;
+}
+
+h3 {
   margin-top: 0.5em;
   margin-bottom: 0.25em;
-  font-size: 24.0pt;
+  font-size: 24pt;
   font-weight: bold;
   color: #4472C4;
 }
-
-/* h3 {
-  font-size: 24.0pt;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  color: #4472C4;
-} */
 
 .toc {
   position: fixed;
