@@ -3305,10 +3305,10 @@
                     <p><b>description -</b> This is a reference field to define the cube recipe</p>
                     <p><b>enabled -</b> Boolean field. If equals 1, then the recipe can be used in-game. If equals
                         0, then the recipe cannot be used in-game.</p>
-                    <p><b>ladder -</b> Boolean field. If equals 1, then the recipe can only be used on Ladder realm
-                        games. If equals 0, then the recipe can be used in all game types.</p>
-                    <p><b>min diff -</b> The minimum game difficulty to use the recipe (0 = All Game Difficulties |
-                        1 = Nightmare and Hell Difficulty only | 2 = Hell Difficulty only)</p>
+
+                    <p><b>firstLadderSeason -</b> Integer field. The first ladder season this cube recipe can be made on (inclusive). If blank or 0 then it is available in non-ladder.</p>
+                    <p><b>lastLadderSeason -</b> Integer field. The last ladder season this cube recipe is ladder-only (inclusive). Must be used in conjunction with firstLadderSeason.</p>
+                    <p><b>min diff -</b> The minimum game difficulty to use the recipe (0 = All Game Difficulties | 1 = Nightmare and Hell Difficulty only | 2 = Hell Difficulty only)</p>
                     <p><b>version -</b> Defines which game version to use this recipe (0 = Classic mode | 100 =
                         Expansion mode)</p>
 
@@ -24411,9 +24411,9 @@
                     <p><b>complete -</b> Boolean field. If equals 1, then the Rune Word can be crafted in-game. If
                         equals 0, then the Rune Word cannot be crafted in-game.</p>
 
-                    <p><b>server -</b> Boolean field. If equals 1, then the Rune Word can only be crafted on
-                        Ladder realm games. If equals 0, then the Rune Word can be crafted in all game
-                        types.</p>
+                    <p><b>firstLadderSeason -</b> Integer field. The first ladder season the Rune Word can be made on (inclusive). If blank or 0 then it is available in non-ladder.</p>
+
+                    <p><b>lastLadderSeason -</b> Integer field. The last ladder season the Rune Word is ladder-only (inclusive). Must be used in conjunction with firstLadderSeason.</p>
 
                     <br>
 
@@ -38072,12 +38072,8 @@
                         will be chosen.</p>
 
                     <br>
-
-                    <p><b>TC
-                            & TC(N) & TC(H) -</b>
-                        Controls the Treasure Class to use when the Super Unique monster is killed respectively
-                        in Normal, Nightmare, or Hell difficulty. This linked to the "Treasure Class"
-                        ID from the TreasureClassEx.txt file</p>
+                    <p><b>TC & TC(N) & TC(H) -</b> Controls the Treasure Class to use when the Super Unique monster is killed respectively in Normal, Nightmare, or Hell difficulty. This linked to the "Treasure Class" ID from the TreasureClassEx.txt file.</p>
+                    <p><b>TC Desecrated & TC(N) Desecrated & TC(H) Desecrated -</b> Controls the Treasure Class to use when the Super Unique monster is desecrated (Terrorized) and killed respectively in Normal, Nightmare, or Hell difficulty. This linked to the "Treasure Class" ID from the TreasureClassEx.txt file.</p>
 
                     <h2 id="TreasureClassEx">TreasureClassEx.txt</h2>
 
@@ -38180,6 +38176,10 @@
                         for a total denominator value, and then having each "Prob#" value and the
                         "NoDrop" value rolling their chance out of the total denominator value for a
                         drop.</p>
+                    <br>
+                    <p><b>firstLadderSeason -</b> Integer field. If this has a value, it will only roll in ladder games starting at the season specified (inclusive). If blank or 0 then it will roll in ladder and non-ladder.</p>
+                    <p><b>lastLadderSeason -</b> Integer field. The last ladder season the treasure class is ladder-only (inclusive). Must be used in conjunction with firstLadderSeason.</p>
+                    <p><b>noAlwaysDrop -</b> Boolean field. If equals 1, then this treasure class will roll normally when being forced to always drop, like with the Find Item skill. If 0 then this treasure class will always drop an item when forced to.</p>
 
                     <h2 id="UniqueAppellation">UniqueAppellation.txt</h2>
 
@@ -38234,15 +38234,9 @@
                             -</b> Defines
                         which game version to create this item (&lt;100 = Classic mode | 100 =
                         Expansion mode)</p>
-                    <p><b>enabled
-                            -</b> Boolean
-                        Field. If equals 1, then this item can be created and dropped. If equals 0,
-                        then this item cannot be dropped.</p>
-                    <p><b>ladder
-                            -</b> Boolean
-                        Field. If equals 1, then this item can only be created and dropped in online
-                        Battle.net Ladder games. If equals 0, then this item can be created and dropped
-                        in any game mode.</p>
+                    <p><b>enabled -</b> Boolean Field. If equals 1, then this item can be rolled as a choice when randomly dropping a unique. If equals 0, then this item cannot be dropped randomly, but can still be drop explicitly from a treasure class.</p>
+                    <p><b>firstLadderSeason -</b> Integer field. The first ladder season the unique item can be Dropped or created on (inclusive). If blank or 0 then it is available in non-ladder.</p>
+                    <p><b>lastLadderSeason -</b> Integer field. The last ladder season the unique item is ladder-only (inclusive). Must be used in conjunction with firstLadderSeason.</p>
                     <p><b>rarity
                             -</b> Modifies the
                         chances that this Unique item will spawn compared to the other Unique items.
